@@ -1,6 +1,6 @@
 from csv_read_plot_show import *
 
-dataset_path = './NFL Play by Play 2009-2017 (v4).csv'
+dataset_path = './NFL Play by Play 2009-2017 (v4).csv'  # 替换为数据集所在路径或将其复制到当前工作目录
 df = read_csv(dataset_path, na_values='None')
 # 标称属性
 name_category = ['Drive', 'qtr', 'down', 'SideofField', 'ydstogo', 'GoalToGo', 'FirstDown', 'posteam',
@@ -28,10 +28,10 @@ count(df, name_category, file=name_cat_cnt_out_file)
 describe(df, name_value)    # , file=describe_out_file)
 
 # 直方图
-#histogram(df, name_value)
+histogram(df, name_value)
 
 # q-q图
-#qqplot(df, name_value)
+qqplot(df, name_value)
 
 # 盒图
 boxplot(df, name_value)

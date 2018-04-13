@@ -1,6 +1,6 @@
 from csv_read_plot_show import *
 
-dataset_path = './Building_Permits.csv'
+dataset_path = './Building_Permits.csv'  # 替换为数据集所在路径或将其复制到当前工作目录
 df = read_csv(dataset_path, na_values='None')
 # 标称属性
 name_category = ['Permit Type', 'Block', 'Lot', 'Street Number', 'Street Number Suffix', 'Street Name', 'Street Suffix',
