@@ -28,31 +28,11 @@ describe(df, name_value)#, file=describe_out_file)
 cols = ['Structural Notification', 'Voluntary Soft-Story Retrofit', 'Fire Only Permit', 'TIDF Compliance']
 df_fillna = df[cols].fillna('N')
 df[cols] = df_fillna[cols]
-#print('                  旧数据\n')
-#count(df, cols)
-
-#print('\n\n                  新数据\n')
-#count(df_fillna, cols)
 
 data_set = df[name_category].values
-# print(data_set)
 for t in data_set:
     for item in t:
         print(item, end=' ', file=name_cat_out_file)
     print(file=name_cat_out_file)
-
-# 注释了这段apriori的
-# L, support_data = generate_L(data_set, k=3, min_support=0.02)
-# big_rules_list = generate_big_rules(L, support_data, min_conf=0.7)
-# for Lk in L:
-#    print("="*50)
-#    print("frequent " + str(len(list(Lk)[0])) + "-itemsets\t\tsupport")
-#    print("="*50)
-#    for freq_set in Lk:
-#         print(freq_set, support_data[freq_set])
-# print()
-# print("Big Rules")
-# for item in big_rules_list:
-#     print(item[0], "=>", item[1], "conf: ", item[2])
 
 
